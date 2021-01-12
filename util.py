@@ -221,7 +221,7 @@ class GetLogger:
         '''
         path: 日志文件的路径
         '''
-        self.path = '%s\%s.log' % (path, time.strftime('%Y-%m-%d'))
+        self.path = '%s\%s.log' % (path, time.strftime('%Y-%m-%d %H：%M'))
         # 创建日志
         self.logger = logging.getLogger()
         # 设置日志级别
