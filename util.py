@@ -12,7 +12,9 @@ class BoxDriver:
 
     def __init__(self, broswer_type='Chrome'):
         if broswer_type == 'Chrome':
-            self.driver = webdriver.Chrome(r'C:\Users\24630\AppData\Local\Google\Chrome\Application\chrome.exe')
+            option = webdriver.ChromeOptions()
+            option.binary_location = r'C:\Users\24630\AppData\Local\Google\Chrome\Application\chrome.exe'
+            self.driver = webdriver.Chrome()
         elif broswer_type == 'Firefox':
             self.driver = webdriver.Firefox()
         elif broswer_type == 'Ie':
