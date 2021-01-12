@@ -46,15 +46,15 @@ class Work(BasePage):
             # driver.click('x,//span[text()="提交"]')
             self.log.info(f"日报提交成功,日志内容为:\n\n{content}")
             # 提示框
-            root = tkinter.Tk()
-            root.withdraw()
-            tkinter.messagebox.showinfo('提示', "日志上传完成")
+            # root = tkinter.Tk()
+            # root.withdraw()
+            # tkinter.messagebox.showinfo('提示', "日志上传完成")
         except Exception as e:
             self.log.warning(f"日报提交失败,失败原因为:{e}")
             # 提示框
-            root = tkinter.Tk()
-            root.withdraw()
-            tkinter.messagebox.showerror("提示","日志提交失败")
+            # root = tkinter.Tk()
+            # root.withdraw()
+            # tkinter.messagebox.showerror("提示","日志提交失败")
         finally:
             self.driver.quit()
             self.log.info(f"浏览器关闭")
