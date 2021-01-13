@@ -9,7 +9,7 @@ import tkinter.messagebox
 class Work(BasePage):
     def Lonin(self,name='20201221101037',password='12345678'):
         try:
-            self.log = GetLogger(r'C:\Users\24630\Desktop\TBEA\Report\log')
+            self.log = GetLogger(r'.\log')
             driver = self.driver
             driver.locate_element('x,//input[@placeholder="请输入您的帐号"]').clear()
             driver.input('x,//input[@placeholder="请输入您的帐号"]',name)
@@ -43,7 +43,7 @@ class Work(BasePage):
                 content = content + text + '\n'
             driver.input('x,/html/body/div/div/section/section/main/div/div[1]/div[2]/div[3]/div/div[2]/div/div/div/div[2]/div/div[2]/div[3]/table/tbody/tr/td[7]/div/div/div/textarea',content)
             # 提交
-            driver.click('x,//span[text()="提交"]')
+            # driver.click('x,//span[text()="提交"]')
             self.log.info(f"日报提交成功,日志内容为:\n\n{content}")
             # 提示框
             # root = tkinter.Tk()
@@ -64,6 +64,6 @@ if __name__ == '__main__':
     # 输入用户名密码
     work.Lonin(name='20201221101037',password='12345678')
     # 工作日志保存位置
-    work.WriteLog(r'C:\Users\24630\Desktop\TBEA\Report\LOG.txt')
+    work.WriteLog(r'.\Report\Report.txt')
 
 
