@@ -53,7 +53,7 @@ class Work(BasePage):
                 'x,/html/body/div/div/section/section/main/div/div[1]/div[2]/div[3]/div/div[2]/div/div/div/div[2]/div/div[2]/div[3]/table/tbody/tr/td[7]/div/div/div/textarea',
                 content)
             # 提交
-            # driver.click('x,//span[text()="提交"]')
+            driver.click('x,//span[text()="提交"]')
             self.log.info(f"日报提交成功,日志内容为:\n\n{content}")
             # 提示框
             # root = tkinter.Tk()
